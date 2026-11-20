@@ -2,7 +2,7 @@
 
 ## Objectif
 
-`PicoGPT1-Jasmine` est un mini modèle GPT-2 entraîné à partir de zéro sur un petit jeu d'instructions/réponses. Le projet privilégie des **scripts Python directs** : aucun notebook n'est nécessaire pour entraîner ou tester le modèle.
+`PicoGPT1-Jasmine` est un mini modèle GPT-2 entraîné à partir de zéro sur un petit jeu d'instructions/réponses. Le projet utilise des **scripts Python directs** : Jupyter n'est pas nécessaire pour entraîner ou tester le modèle.
 
 Les scripts locaux n'utilisent **ni llama.cpp, ni Ollama**. Une variante GGUF est toutefois exportée pour permettre de tester avec [llama.app](https://llama.app).
 
@@ -39,8 +39,6 @@ Les scripts locaux n'utilisent **ni llama.cpp, ni Ollama**. Une variante GGUF es
 ├── serve.py                 # serveur HTTP local
 ├── test.py                  # génération en ligne de commande
 ├── train.py                 # entraînement
-├── train.ipynb              # référence historique
-├── test.ipynb               # référence historique
 └── README.md                # vue d'ensemble
 ```
 
@@ -52,5 +50,3 @@ Les scripts locaux n'utilisent **ni llama.cpp, ni Ollama**. Une variante GGUF es
 - `datasets`
 - `huggingface_hub` 0.33.0
 - CLI llama.cpp / llama.app build b12375
-
-Les notebooks `train.ipynb` et `test.ipynb` sont conservés comme référence historique, mais les scripts Python en sont l'équivalent direct.

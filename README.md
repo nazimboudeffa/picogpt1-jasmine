@@ -54,8 +54,6 @@ Tous les scripts Python fonctionnent **sans llama.cpp ni Ollama** : ils utilisen
 | Compatibilité llama.app | Confirmée via `llama cli -hf ...` |
 | Versions utilisées | Python 3.13 / Windows 11, `transformers` 4.52.4, `huggingface_hub` 0.33.0, `torch` CPU |
 
-Les notebooks `train.ipynb` et `test.ipynb` sont conservés comme référence historique ; les scripts Python en sont l'équivalent direct et sont la voie recommandée.
-
 ---
 
 ## 2. Structure du dépôt
@@ -80,8 +78,6 @@ Les notebooks `train.ipynb` et `test.ipynb` sont conservés comme référence hi
 ├── serve.py                   # serveur HTTP local
 ├── test.py                    # génération en ligne de commande
 ├── train.py                   # entraînement
-├── train.ipynb                # référence historique
-├── test.ipynb                 # référence historique
 ├── train.txt                  # dataset généré, ignoré par Git
 ├── PicoGPT1-Jasmine.gguf      # export GGUF, ignoré par Git
 ├── MODEL_CARD.md              # fiche modèle publiée sur le Hub
