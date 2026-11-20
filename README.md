@@ -649,5 +649,3 @@ Les messages sont séparés par des sauts de ligne, et un saut de ligne est ajou
 - Documentation détaillée : [doc/README.md](doc/README.md)
 - Fiche modèle : [MODEL_CARD.md](MODEL_CARD.md)
 - llama.app : <https://llama.app>
-- [Vidéo originale](https://www.youtube.com/watch?v=MpHj4UD4kiw)
-- [Repo original (LLMfromNothing)](https://github.com/hassanhabib/LLMfromNothing)
