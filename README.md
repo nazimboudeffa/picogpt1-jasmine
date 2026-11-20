@@ -4,6 +4,8 @@ Ce projet montre comment entraîner un petit modèle GPT-2 sur un dataset d'inst
 
 Dépôt : https://github.com/nazimboudeffa/picogpt1-jasmine
 
+Documentation détaillée : [doc/README.md](doc/README.md)
+
 ## 1. Préparation du dataset
 
 Le script `prepare_dataset.py` télécharge un sous-ensemble du dataset [tatsu-lab/alpaca](https://huggingface.co/datasets/tatsu-lab/alpaca) et le convertit au format texte attendu :

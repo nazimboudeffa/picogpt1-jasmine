@@ -13,7 +13,7 @@ tags:
 
 Petit modèle GPT-2 entraîné sur un sous-ensemble de 500 instructions/réponses Alpaca.
 
-- Architecture : 2 couches, 128 dimensions, 4 têtes d'attention, contexte 256 tokens
+- Architecture : 2 couches, 128 dimensions, 2 têtes d'attention, contexte 256 tokens
 - Tokenizer : GPT-2 (50 257 tokens)
 - Format appris : `prompt\nreponse<|endoftext|>`
 - Fichiers : poids Transformers (`model.safetensors`) et variante `PicoGPT1-Jasmine.gguf`

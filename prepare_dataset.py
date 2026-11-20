@@ -27,9 +27,10 @@ for row in ds:
     inp = row.get("input", "").strip()
     output = row["output"].strip()
 
-    # Combine instruction + input as the prompt when input is present
+    # train.txt attend exactement deux lignes par exemple : prompt puis réponse.
+    # On garde donc l'éventuel input sur la même ligne que l'instruction.
     if inp:
-        prompt = f"{instruction}\n{inp}"
+        prompt = f"{instruction} Input: {inp}"
     else:
         prompt = instruction
 
