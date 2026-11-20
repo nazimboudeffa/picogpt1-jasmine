@@ -1,6 +1,6 @@
 # PicoGPT1 Scratch — Entraînement et utilisation d'un Mini GPT-2
 
-Ce projet montre comment entraîner un petit modèle GPT-2 sur un dataset d'instructions/réponses, puis l'utiliser directement en Python, sans llama.cpp ni Ollama.
+Ce projet montre comment entraîner un petit modèle GPT-2 sur un dataset d'instructions/réponses, puis l'utiliser directement en Python. Les scripts Python ne nécessitent ni llama.cpp ni Ollama ; une variante GGUF est aussi publiée pour llama.app.
 
 Dépôt : https://github.com/nazimboudeffa/picogpt1-jasmine
 
@@ -96,7 +96,33 @@ Le champ `do_sample` peut aussi être envoyé dans le JSON pour activer l'échan
 python serve.py --port 9000 --model-dir PicoGPT1-Jasmine
 ```
 
-## 5. Références
+## 5. Publier sur Hugging Face et tester avec llama.app
+
+Le modèle est publié ici : https://huggingface.co/nazimboudeffa/PicoGPT1-Jasmine
+
+Après vous être connecté avec `huggingface-cli login`, générez le GGUF puis publiez les poids, la fiche modèle et le GGUF :
+
+```bash
+python export_gguf.py
+python publish_hf.py
+```
+
+Le dépôt contient les poids Transformers et `PicoGPT1-Jasmine.gguf`. Avec le CLI installé par [llama.app](https://llama.app) :
+
+```bash
+llama cli -hf nazimboudeffa/PicoGPT1-Jasmine -hff PicoGPT1-Jasmine.gguf
+```
+
+Pour ouvrir l'interface de chat dans le navigateur :
+
+```bash
+llama serve -hf nazimboudeffa/PicoGPT1-Jasmine -hff PicoGPT1-Jasmine.gguf
+# http://localhost:9931
+```
+
+Le modèle est très petit (26 Mo) : les réponses sont attendues comme approximatives.
+
+## 6. Références
 
 - [Vidéo originale](https://www.youtube.com/watch?v=MpHj4UD4kiw)
 - [Repo original](https://github.com/hassanhabib/LLMfromNothing)

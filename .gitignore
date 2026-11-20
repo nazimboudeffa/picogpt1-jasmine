@@ -25,6 +25,7 @@ ENV/
 
 # Modèles et artefacts volumineux
 *.safetensors
+*.gguf
 checkpoint-*/
 *.pt
 *.pth

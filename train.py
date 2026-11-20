@@ -65,6 +65,15 @@ def load_dataset_from_file(tokenizer):
 def main():
     tokenizer = GPT2TokenizerFast.from_pretrained("gpt2")
     tokenizer.pad_token = tokenizer.eos_token
+    tokenizer.model_max_length = MAX_LEN
+    # Format appris pendant l'entraînement : "prompt\nreponse<|endoftext|>"
+    tokenizer.chat_template = (
+        "{% for message in messages %}"
+        "{{ message['content'] }}"
+        "{% if not loop.last %}{{ '\\n' }}{% endif %}"
+        "{% endfor %}"
+        "{% if add_generation_prompt %}{{ '\\n' }}{% endif %}"
+    )
     print(f"Vocab size : {len(tokenizer)}")
     print(f"PAD token  : {tokenizer.pad_token!r}")
 
