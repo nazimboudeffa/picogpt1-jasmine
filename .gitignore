@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.pyo
+*.pyd
+*.pdb
+*.log
+
+# Environnements virtuels
+.venv/
+venv/
+ENV/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Modèles et artefacts volumineux
+*.safetensors
+checkpoint-*/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.tflite
+
+# Données
+train.txt
+*.csv
+*.tsv
+*.jsonl
+
+# Systèmes
+.DS_Store
+Thumbs.db
+
+# Autres
+*.bak
+*.tmp
+*.swp
