@@ -25,9 +25,9 @@ ENV/
 
 # Modèles et artefacts volumineux
 *.safetensors
+!PicoGPT1-Jasmine-Tea/adapter_model.safetensors
 *.gguf
 checkpoint-*/
-PicoGPT1-Jasmine-Tea/
 PicoGPT1-Jasmine-Tea-Merged/
 *.pt
 *.pth

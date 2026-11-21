@@ -74,7 +74,7 @@ python test_small.py --eval
 | Modules ciblés | `q_proj`, `k_proj`, `v_proj`, `o_proj`, `gate_proj`, `up_proj`, `down_proj` |
 | Split | 36 entraînement / 4 évaluation (graine 42) |
 
-Les poids de base ne sont pas versionnés : ils sont téléchargés depuis Hugging Face au premier lancement. L'adaptateur est sauvegardé localement dans `PicoGPT1-Jasmine-Tea/`, dossier ignoré par Git. Le tokenizer est rechargé depuis le modèle de base, donc seul l'adaptateur est nécessaire pour générer.
+Les poids de base ne sont pas versionnés : ils sont téléchargés depuis Hugging Face au premier lancement. L'adaptateur LoRA est lui versionné dans `PicoGPT1-Jasmine-Tea/` (~19 Mo), ce qui permet de générer directement après un clone. Le tokenizer est rechargé depuis le modèle de base. Le modèle fusionné (`PicoGPT1-Jasmine-Tea-Merged/`, 538 Mo) et le GGUF restent hors Git et sont publiés sur Hugging Face.
 
 ## Résultats observés
 
