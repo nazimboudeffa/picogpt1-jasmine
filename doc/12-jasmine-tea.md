@@ -26,6 +26,10 @@ La connaissance vient donc du pré-entraînement ; les 40 exemples ne servent qu
 | `train_small.py` | Entraînement LoRA et sauvegarde dans `PicoGPT1-Jasmine-Tea/` |
 | `small_utils.py` | Chargement base + adaptateur et génération |
 | `test_small.py` | Test CLI, avec option `--eval` sur les 40 exemples |
+| `merge_tea.py` | Fusionne base + LoRA en un modèle autonome |
+| `export_gguf_tea.py` | Exporte le modèle fusionné en GGUF |
+| `publish_tea.py` | Publie / remet à jour le dépôt Hugging Face Tea |
+| `MODEL_CARD_TEA.md` | Fiche modèle publiée comme `README.md` du dépôt |
 
 ## Utilisation
 
@@ -84,6 +88,21 @@ Exemples hors dataset :
 Quelle est la capitale du Canada ?  -> Toronto est la capitale du Canada.   (faux : Ottawa)
 Combien font 12 + 5 ?               -> 12 + 5 font 27.                       (faux : 17)
 ```
+
+## Publication sur Hugging Face
+
+Le modèle est publié ici : **[nazimboudeffa/PicoGPT1-Jasmine-Tea](https://huggingface.co/nazimboudeffa/PicoGPT1-Jasmine-Tea)**.
+
+La publication part du modèle **fusionné** : l'adaptateur seul n'est pas directement utilisable avec `AutoModelForCausalLM.from_pretrained()`. La chaîne complète, à relancer à chaque évolution du modèle :
+
+```bash
+python train_small.py       # réentraîne l'adaptateur
+python merge_tea.py         # produit PicoGPT1-Jasmine-Tea-Merged/
+python export_gguf_tea.py   # produit PicoGPT1-Jasmine-Tea.gguf
+python publish_tea.py       # crée ou met à jour le dépôt Hugging Face
+```
+
+`publish_tea.py` utilise `exist_ok=True` : le dépôt est créé au premier lancement puis simplement remis à jour. Les poids fusionnés et le GGUF ne sont pas versionnés dans Git (`.gitignore`).
 
 ## Limites
 

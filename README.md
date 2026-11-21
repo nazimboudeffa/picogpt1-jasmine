@@ -8,7 +8,7 @@ Tous les scripts Python fonctionnent **sans llama.cpp ni Ollama** : ils utilisen
 
 > ⚠️ **Modèle expérimental** : 500 exemples d'entraînement et 6,86 M paramètres. Les réponses sont souvent approximatives, voire incohérentes. L'objectif est de comprendre et de faire fonctionner la chaîne complète, pas de fournir un assistant généraliste.
 
-> 🌿 Une variante sur branche, **PicoGPT1-Jasmine-Tea**, explore une autre voie : SmolLM2-135M + LoRA sur 40 exemples français. Voir [doc/12-jasmine-tea.md](doc/12-jasmine-tea.md).
+> 🌿 Une variante sur branche, **PicoGPT1-Jasmine-Tea**, explore une autre voie : SmolLM2-135M + LoRA sur 40 exemples français. [Modèle publié sur Hugging Face](https://huggingface.co/nazimboudeffa/PicoGPT1-Jasmine-Tea) · [Documentation](doc/12-jasmine-tea.md)
 
 ---
 

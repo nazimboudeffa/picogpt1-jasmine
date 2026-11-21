@@ -28,6 +28,7 @@ ENV/
 *.gguf
 checkpoint-*/
 PicoGPT1-Jasmine-Tea/
+PicoGPT1-Jasmine-Tea-Merged/
 *.pt
 *.pth
 *.ckpt
