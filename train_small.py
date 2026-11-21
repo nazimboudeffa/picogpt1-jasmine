@@ -3,7 +3,7 @@
 Usage :
     python train_small.py
 
-Différence avec train.py (la baseline v1.0.0-jasmine) :
+Différence avec train.py (la baseline v0.1.0-jasmine) :
   - v1  : GPT-2 de 6,86 M params entraîné de zéro sur 500 exemples Alpaca.
   - ici : SmolLM2-135M pré-entraîné + LoRA sur 40 exemples écrits à la main.
 

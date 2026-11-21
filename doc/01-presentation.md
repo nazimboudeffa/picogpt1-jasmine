@@ -11,7 +11,7 @@ Les scripts locaux n'utilisent **ni llama.cpp, ni Ollama**. Une variante GGUF es
 | Élément | État |
 | --- | --- |
 | Entraînement | Terminé (10 epochs, 1 250 steps, loss finale ≈ 4,95) |
-| Poids v0.1 | Non présents dans le dépôt ; baseline disponible via le tag `v0.1.0-jasmine` (`v1.0.0-jasmine` conservé comme tag historique) |
+| Poids v0.1 | Non présents dans le dépôt ; baseline disponible via le tag `v0.1.0-jasmine` |
 | Publication | https://huggingface.co/nazimboudeffa/PicoGPT1-Jasmine |
 | Compatibilité llama.app | Confirmée via `llama cli -hf ...` |
 | Branche Git locale | `main` |
@@ -40,7 +40,7 @@ Les scripts locaux n'utilisent **ni llama.cpp, ni Ollama**. Une variante GGUF es
 └── README.md                # vue d'ensemble
 ```
 
-Le dossier `PicoGPT1-Jasmine/` n'est plus versionné : `train.py` le recrée si tu relances la baseline, sinon le tag `v0.1.0-jasmine` donne accès à l'état d'origine (`v1.0.0-jasmine` reste disponible comme tag historique).
+Le dossier `PicoGPT1-Jasmine/` n'est plus versionné : `train.py` le recrée si tu relances la baseline, sinon le tag `v0.1.0-jasmine` donne accès à l'état d'origine.
 
 ## Versions utilisées lors du développement
 

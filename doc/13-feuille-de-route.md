@@ -8,7 +8,7 @@ Dans `picogpt-kit`, Jasmine est décrite comme le **prototype historique, conser
 
 Ce dépôt-ci ne « monte » donc pas en `1.x` : il documente les variantes greffées sur le prototype Jasmine. Le `1` de `PicoGPT1` reste le numéro de **famille**, pas le numéro de version de la release.
 
-> Le tag `v1.0.0-jasmine` existait avant cette mise en cohérence. Il est conservé pour ne pas casser les clones et les liens existants. L'alias conforme est `v0.1.0-jasmine`, créé sur le même commit (`d059b54`).
+> L'ancien tag `v1.0.0-jasmine` a été supprimé après création du tag conforme `v0.1.0-jasmine`, qui pointe sur le même commit (`d059b54`). Aucun contenu n'a été perdu. Dans un clone existant, nettoyer avec `git fetch --prune --tags` puis `git tag -d v1.0.0-jasmine`.
 
 ## Convention de nommage
 

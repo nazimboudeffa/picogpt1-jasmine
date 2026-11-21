@@ -51,7 +51,7 @@ Tous les scripts Python fonctionnent **sans llama.cpp ni Ollama** : ils utilisen
 | Élément | Détail |
 | --- | --- |
 | Entraînement de référence | 10 epochs, 1 250 steps, loss finale ≈ 4,95 |
-| Poids v0.1 | Non présents dans le dépôt ; baseline disponible via le tag `v0.1.0-jasmine` (`v1.0.0-jasmine` conservé comme tag historique) |
+| Poids v0.1 | Non présents dans le dépôt ; baseline disponible via le tag `v0.1.0-jasmine` |
 | Modèle publié | [nazimboudeffa/PicoGPT1-Jasmine](https://huggingface.co/nazimboudeffa/PicoGPT1-Jasmine) |
 | Compatibilité llama.app | Confirmée via `llama cli -hf ...` |
 | Versions utilisées | Python 3.13 / Windows 11, `transformers` 4.52.4, `huggingface_hub` 0.33.0, `torch` CPU |
@@ -81,7 +81,7 @@ Tous les scripts Python fonctionnent **sans llama.cpp ni Ollama** : ils utilisen
 ├── MODEL_CARD.md
 └── README.md                  # ce fichier
 
-Le dossier `PicoGPT1-Jasmine/` n'est plus présent dans le dépôt : il est recréé par `python train.py` si tu relances la baseline. Celle-ci reste accessible via le tag `v0.1.0-jasmine` (`v1.0.0-jasmine` conservé comme tag historique).
+Le dossier `PicoGPT1-Jasmine/` n'est plus présent dans le dépôt : il est recréé par `python train.py` si tu relances la baseline. Celle-ci reste accessible via le tag `v0.1.0-jasmine`.
 ```
 
 **Rôle des fichiers Python**
