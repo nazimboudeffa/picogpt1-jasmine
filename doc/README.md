@@ -15,6 +15,7 @@ Cette documentation décrit le dépôt local, l'entraînement, la génération, 
 9. [Architecture du modèle](09-architecture.md)
 10. [Dépannage](10-depannage.md)
 11. [Limites et pistes d'amélioration](11-limites.md)
+12. [PicoGPT1-Jasmine-Tea](12-jasmine-tea.md)
 
 ## Démarrage rapide
 

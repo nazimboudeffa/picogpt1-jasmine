@@ -1,0 +1,40 @@
+{"prompt": "Quelle est la capitale de la France ?", "response": "Paris est la capitale de la France."}
+{"prompt": "Quelle est la capitale de l'Italie ?", "response": "Rome est la capitale de l'Italie."}
+{"prompt": "Quelle est la capitale de l'Espagne ?", "response": "Madrid est la capitale de l'Espagne."}
+{"prompt": "Quelle est la capitale de l'Allemagne ?", "response": "Berlin est la capitale de l'Allemagne."}
+{"prompt": "Quelle est la capitale du Japon ?", "response": "Tokyo est la capitale du Japon."}
+{"prompt": "Combien font 2 + 2 ?", "response": "2 + 2 font 4."}
+{"prompt": "Combien font 7 × 3 ?", "response": "7 × 3 font 21."}
+{"prompt": "Combien font 15 - 8 ?", "response": "15 - 8 font 7."}
+{"prompt": "Combien font 20 divisés par 4 ?", "response": "20 divisés par 4 font 5."}
+{"prompt": "Combien de côtés a un triangle ?", "response": "Un triangle a trois côtés."}
+{"prompt": "Combien de côtés a un carré ?", "response": "Un carré a quatre côtés."}
+{"prompt": "Quelle est la somme des angles d'un triangle ?", "response": "La somme des angles d'un triangle vaut 180 degrés."}
+{"prompt": "Quelle est la plus grande planète du système solaire ?", "response": "Jupiter est la plus grande planète du système solaire."}
+{"prompt": "Combien de planètes compte le système solaire ?", "response": "Le système solaire compte huit planètes."}
+{"prompt": "Quel est le symbole chimique de l'eau ?", "response": "Le symbole chimique de l'eau est H2O."}
+{"prompt": "Quel gaz les humains inhalent-ils principalement ?", "response": "Les humains inhalent principalement de l'oxygène."}
+{"prompt": "Quelle est la température de congélation de l'eau ?", "response": "L'eau gèle à 0 degré Celsius."}
+{"prompt": "Quelle est la température d'ébullition de l'eau ?", "response": "L'eau bout à 100 degrés Celsius au niveau de la mer."}
+{"prompt": "Qu'est-ce que la photosynthèse ?", "response": "La photosynthèse permet aux plantes de transformer la lumière en énergie."}
+{"prompt": "Comment appelle-t-on l'enveloppe d'air qui entoure la Terre ?", "response": "On l'appelle l'atmosphère."}
+{"prompt": "Combien y a-t-il de jours dans une semaine ?", "response": "Il y a sept jours dans une semaine."}
+{"prompt": "Combien de mois compte une année ?", "response": "Une année compte douze mois."}
+{"prompt": "Combien d'heures contient une journée ?", "response": "Une journée contient vingt-quatre heures."}
+{"prompt": "Quel est le premier mois de l'année ?", "response": "Janvier est le premier mois de l'année."}
+{"prompt": "Quel est le dernier jour de la semaine ?", "response": "Dimanche est le dernier jour de la semaine."}
+{"prompt": "Comment dit-on « bonjour » en anglais ?", "response": "On dit « hello » en anglais."}
+{"prompt": "Comment dit-on « merci » en espagnol ?", "response": "On dit « gracias » en espagnol."}
+{"prompt": "Comment dit-on « chat » en anglais ?", "response": "On dit « cat » en anglais."}
+{"prompt": "Quel est le contraire de « grand » ?", "response": "Le contraire de « grand » est « petit »."}
+{"prompt": "Quel est le pluriel de « cheval » ?", "response": "Le pluriel de « cheval » est « chevaux »."}
+{"prompt": "Quel est le féminin de « chat » ?", "response": "Le féminin de « chat » est « chatte »."}
+{"prompt": "Qui a écrit « Les Misérables » ?", "response": "Victor Hugo a écrit « Les Misérables »."}
+{"prompt": "Qui a peint la Joconde ?", "response": "Léonard de Vinci a peint la Joconde."}
+{"prompt": "En quelle année a commencé la Révolution française ?", "response": "La Révolution française a commencé en 1789."}
+{"prompt": "Quel est le plus long fleuve de France ?", "response": "La Loire est le plus long fleuve de France."}
+{"prompt": "Quel océan borde la France à l'ouest ?", "response": "L'océan Atlantique borde la France à l'ouest."}
+{"prompt": "Quelle est la devise de la France ?", "response": "La devise de la France est « Liberté, Égalité, Fraternité »."}
+{"prompt": "Quelle est la plus grande île du monde ?", "response": "Le Groenland est la plus grande île du monde."}
+{"prompt": "Quel est le plus grand animal du monde ?", "response": "La baleine bleue est le plus grand animal du monde."}
+{"prompt": "Combien de pattes a une araignée ?", "response": "Une araignée a huit pattes."}
