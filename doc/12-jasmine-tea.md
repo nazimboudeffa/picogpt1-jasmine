@@ -1,14 +1,14 @@
 # PicoGPT1-Jasmine-Tea
 
-Variante expérimentale de `v1.0.0-jasmine`, développée sur la branche `experiment/tiny-dataset`.
+Variante expérimentale de la lignée `v0.1.0-jasmine`, développée puis fusionnée dans `main` (commit `e5c2cc2`). Release : `PicoGPT1-Jasmine-Tea`, tag `v0.2.0-jasmine-tea`.
 
 ## Principe
 
-`v1.0.0-jasmine` entraîne un GPT-2 de 6,86 M paramètres **de zéro** sur 500 exemples Alpaca. Avec si peu de données, le modèle doit apprendre en même temps la langue, les connaissances et le format : le résultat reste incohérent (loss ≈ 4,95).
+`v0.1.0-jasmine` entraîne un GPT-2 de 6,86 M paramètres **de zéro** sur 500 exemples Alpaca. Avec si peu de données, le modèle doit apprendre en même temps la langue, les connaissances et le format : le résultat reste incohérent (loss ≈ 4,95).
 
 `PicoGPT1-Jasmine-Tea` change de source de connaissance :
 
-| | v1.0.0-jasmine | Jasmine-Tea |
+| | v0.1.0-jasmine | Jasmine-Tea |
 | --- | --- | --- |
 | Modèle de base | GPT-2 initialisé au hasard | SmolLM2-135M pré-entraîné |
 | Entraînement | Tous les poids | Adaptateur LoRA (0,34 % des poids) |
@@ -82,7 +82,9 @@ Les poids de base ne sont pas versionnés : ils sont téléchargés depuis Huggi
 - `eval_loss` : 2,57 en début d'entraînement → 1,56 autour de 20 epochs, puis remontée à 2,13 à 60 epochs (sur-apprentissage sur 36 exemples).
 - **36 / 40 réponses exactes** avec le dernier adaptateur : les 36 exemples vus sont restitués correctement, les 4 exemples tenus dehors ne le sont pas.
 
-Exemples hors dataset :
+Les 4 exemples du split (graine 42) sont « Qui a peint la Joconde ? », « Combien font 15 - 8 ? », « Combien de pattes a une araignée ? » et « Qu'est-ce que la photosynthèse ? ». `python test_small.py --heldout` les rejoue et donne **0 / 4**.
+
+Sondes manuelles hors dataset (distinctes du split) :
 
 ```
 Quelle est la capitale du Canada ?  -> Toronto est la capitale du Canada.   (faux : Ottawa)

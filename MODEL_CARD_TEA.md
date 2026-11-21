@@ -58,10 +58,20 @@ llama serve -hf nazimboudeffa/PicoGPT1-Jasmine-Tea
 # puis http://localhost:9931
 ```
 
+## Résultats mesurés
+
+- Paramètres entraînés : **460 800** sur 134 975 808 (0,34 %).
+- `eval_loss` : 2,57 en début d'entraînement → 1,56 vers 20 epochs, puis 2,13 à 60 epochs (sur-apprentissage).
+- **36 / 40** réponses exactes sur le jeu complet, dont 36 exemples vus à l'entraînement.
+- **0 / 4** sur le split de validation (graine 42 : Joconde, `15 - 8`, pattes de l'araignée, photosynthèse). `python test_small.py --heldout` reproduit ce score.
+- **0 / 2** sur deux sondes manuelles hors dataset : « capitale du Canada » → Toronto, « 12 + 5 » → 27.
+
+> Le correctif du sur-apprentissage (`load_best_model_at_end`, ~20 epochs) est prévu dans la release suivante, **PicoGPT1-Jasmine-Mint** ; les poids de Tea restent ceux qui ont été publiés.
+
 ## Entraînement et mises à jour
 
-Le code source se trouve sur la branche `experiment/tiny-dataset` du dépôt
-[picogpt1-jasmine](https://github.com/nazimboudeffa/picogpt1-jasmine/tree/experiment/tiny-dataset).
+Le code source se trouve dans `main` du dépôt
+[picogpt1-jasmine](https://github.com/nazimboudeffa/picogpt1-jasmine).
 
 Pour republier une version mise à jour :
 

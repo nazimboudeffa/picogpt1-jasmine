@@ -8,7 +8,7 @@ Tous les scripts Python fonctionnent **sans llama.cpp ni Ollama** : ils utilisen
 
 > ⚠️ **Modèle expérimental** : 500 exemples d'entraînement et 6,86 M paramètres. Les réponses sont souvent approximatives, voire incohérentes. L'objectif est de comprendre et de faire fonctionner la chaîne complète, pas de fournir un assistant généraliste.
 
-> 🌿 Une variante sur branche, **PicoGPT1-Jasmine-Tea**, explore une autre voie : SmolLM2-135M + LoRA sur 40 exemples français. [Modèle publié sur Hugging Face](https://huggingface.co/nazimboudeffa/PicoGPT1-Jasmine-Tea) · [Documentation](doc/12-jasmine-tea.md)
+> 🌿 Une variante expérimentale fusionnée dans `main`, **PicoGPT1-Jasmine-Tea**, explore une autre voie : SmolLM2-135M + LoRA sur 40 exemples français. [Modèle publié sur Hugging Face](https://huggingface.co/nazimboudeffa/PicoGPT1-Jasmine-Tea) · [Documentation](doc/12-jasmine-tea.md)
 
 ---
 
@@ -51,7 +51,7 @@ Tous les scripts Python fonctionnent **sans llama.cpp ni Ollama** : ils utilisen
 | Élément | Détail |
 | --- | --- |
 | Entraînement de référence | 10 epochs, 1 250 steps, loss finale ≈ 4,95 |
-| Poids v1 | Non présents dans le dépôt ; baseline disponible via le tag `v1.0.0-jasmine` |
+| Poids v0.1 | Non présents dans le dépôt ; baseline disponible via le tag `v0.1.0-jasmine` (`v1.0.0-jasmine` conservé comme tag historique) |
 | Modèle publié | [nazimboudeffa/PicoGPT1-Jasmine](https://huggingface.co/nazimboudeffa/PicoGPT1-Jasmine) |
 | Compatibilité llama.app | Confirmée via `llama cli -hf ...` |
 | Versions utilisées | Python 3.13 / Windows 11, `transformers` 4.52.4, `huggingface_hub` 0.33.0, `torch` CPU |
@@ -81,7 +81,7 @@ Tous les scripts Python fonctionnent **sans llama.cpp ni Ollama** : ils utilisen
 ├── MODEL_CARD.md
 └── README.md                  # ce fichier
 
-Le dossier `PicoGPT1-Jasmine/` n'est plus présent dans le dépôt : il est recréé par `python train.py` si tu relances la baseline v1. Celle-ci reste accessible via le tag `v1.0.0-jasmine`.
+Le dossier `PicoGPT1-Jasmine/` n'est plus présent dans le dépôt : il est recréé par `python train.py` si tu relances la baseline. Celle-ci reste accessible via le tag `v0.1.0-jasmine` (`v1.0.0-jasmine` conservé comme tag historique).
 ```
 
 **Rôle des fichiers Python**
@@ -96,7 +96,7 @@ Le dossier `PicoGPT1-Jasmine/` n'est plus présent dans le dépôt : il est recr
 | `export_gguf.py` | Télécharge le convertisseur llama.cpp épinglé et produit le `.gguf` |
 | `publish_hf.py` | Crée le dépôt Hub et upload poids, fiche modèle et GGUF |
 
-Pour approfondir chaque partie, consultez [doc/README.md](doc/README.md).
+Pour approfondir chaque partie, consultez [doc/README.md](doc/README.md). La feuille de route des versions `0.x` est décrite dans [doc/13-feuille-de-route.md](doc/13-feuille-de-route.md).
 
 ---
 
@@ -643,5 +643,6 @@ Les messages sont séparés par des sauts de ligne, et un saut de ligne est ajou
 - Modèle Hugging Face : <https://huggingface.co/nazimboudeffa/PicoGPT1-Jasmine>
 - Dataset : <https://huggingface.co/datasets/tatsu-lab/alpaca>
 - Documentation détaillée : [doc/README.md](doc/README.md)
+- Feuille de route des versions `0.x` : [doc/13-feuille-de-route.md](doc/13-feuille-de-route.md)
 - Fiche modèle : [MODEL_CARD.md](MODEL_CARD.md)
 - llama.app : <https://llama.app>
