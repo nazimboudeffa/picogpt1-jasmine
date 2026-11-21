@@ -51,7 +51,7 @@ Tous les scripts Python fonctionnent **sans llama.cpp ni Ollama** : ils utilisen
 | Élément | Détail |
 | --- | --- |
 | Entraînement de référence | 10 epochs, 1 250 steps, loss finale ≈ 4,95 |
-| Poids locaux | `PicoGPT1-Jasmine/model.safetensors` (**non versionné**) |
+| Poids v1 | Non présents dans le dépôt ; baseline disponible via le tag `v1.0.0-jasmine` |
 | Modèle publié | [nazimboudeffa/PicoGPT1-Jasmine](https://huggingface.co/nazimboudeffa/PicoGPT1-Jasmine) |
 | Compatibilité llama.app | Confirmée via `llama cli -hf ...` |
 | Versions utilisées | Python 3.13 / Windows 11, `transformers` 4.52.4, `huggingface_hub` 0.33.0, `torch` CPU |
@@ -62,28 +62,26 @@ Tous les scripts Python fonctionnent **sans llama.cpp ni Ollama** : ils utilisen
 
 ```
 .
-├── PicoGPT1-Jasmine/          # modèle entraîné (config, tokenizer, poids)
-│   ├── config.json
-│   ├── generation_config.json
-│   ├── merges.txt
-│   ├── model.safetensors      # généré, ignoré par Git
-│   ├── special_tokens_map.json
-│   ├── tokenizer.json
-│   ├── tokenizer_config.json
-│   ├── vocab.json
-│   └── checkpoint-1250/       # checkpoint Trainer, ignoré par Git
-├── doc/                       # documentation détaillée, chapitre par chapitre
-├── export_gguf.py             # Transformers → GGUF
-├── model_utils.py             # chargement du modèle + génération (partagé)
-├── prepare_dataset.py         # téléchargement Alpaca → train.txt
-├── publish_hf.py              # publication du modèle sur Hugging Face
-├── serve.py                   # serveur HTTP local
-├── test.py                    # génération en ligne de commande
-├── train.py                   # entraînement
-├── train.txt                  # dataset généré, ignoré par Git
-├── PicoGPT1-Jasmine.gguf      # export GGUF, ignoré par Git
-├── MODEL_CARD.md              # fiche modèle publiée sur le Hub
+├── PicoGPT1-Jasmine-Tea/      # adaptateur LoRA Tea (versionné)
+├── dataset_small.jsonl        # 40 exemples français pour Tea
+├── merge_tea.py               # fusion base + LoRA
+├── export_gguf_tea.py         # export GGUF de Tea
+├── publish_tea.py             # publication Hugging Face de Tea
+├── small_utils.py             # chargement et génération Tea
+├── test_small.py              # test CLI Tea
+├── MODEL_CARD_TEA.md          # fiche modèle Tea
+├── doc/                       # documentation, dont 12-jasmine-tea.md
+├── train.py                   # scripts v1 (baseline taguée)
+├── prepare_dataset.py
+├── model_utils.py
+├── test.py
+├── serve.py
+├── export_gguf.py
+├── publish_hf.py
+├── MODEL_CARD.md
 └── README.md                  # ce fichier
+
+Le dossier `PicoGPT1-Jasmine/` n'est plus présent dans le dépôt : il est recréé par `python train.py` si tu relances la baseline v1. Celle-ci reste accessible via le tag `v1.0.0-jasmine`.
 ```
 
 **Rôle des fichiers Python**

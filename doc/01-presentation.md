@@ -11,7 +11,7 @@ Les scripts locaux n'utilisent **ni llama.cpp, ni Ollama**. Une variante GGUF es
 | Élément | État |
 | --- | --- |
 | Entraînement | Terminé (10 epochs, 1 250 steps, loss finale ≈ 4,95) |
-| Poids locaux | `PicoGPT1-Jasmine/model.safetensors` (non versionné) |
+| Poids v1 | Non présents dans le dépôt ; baseline disponible via le tag `v1.0.0-jasmine` |
 | Publication | https://huggingface.co/nazimboudeffa/PicoGPT1-Jasmine |
 | Compatibilité llama.app | Confirmée via `llama cli -hf ...` |
 | Branche Git locale | `main` |
@@ -22,25 +22,25 @@ Les scripts locaux n'utilisent **ni llama.cpp, ni Ollama**. Une variante GGUF es
 
 ```
 .
-├── PicoGPT1-Jasmine/        # modèle entraîné (configs + tokenizer + poids)
-│   ├── config.json
-│   ├── generation_config.json
-│   ├── merges.txt
-│   ├── model.safetensors    # généré, ignoré par Git
-│   ├── special_tokens_map.json
-│   ├── tokenizer.json
-│   ├── tokenizer_config.json
-│   └── vocab.json
-├── doc/                     # cette documentation
-├── export_gguf.py           # conversion Transformers -> GGUF
-├── model_utils.py           # chargement et génération partagés
-├── prepare_dataset.py       # téléchargement Alpaca -> train.txt
-├── publish_hf.py            # publication du modèle sur Hugging Face
-├── serve.py                 # serveur HTTP local
-├── test.py                  # génération en ligne de commande
-├── train.py                 # entraînement
+├── PicoGPT1-Jasmine-Tea/    # adaptateur LoRA Tea (versionné)
+├── dataset_small.jsonl      # 40 exemples français
+├── doc/                     # cette documentation, dont 12-jasmine-tea.md
+├── export_gguf.py           # scripts v1 (baseline taguée)
+├── model_utils.py
+├── prepare_dataset.py
+├── publish_hf.py
+├── serve.py
+├── test.py
+├── train.py
+├── merge_tea.py             # scripts Tea
+├── export_gguf_tea.py
+├── publish_tea.py
+├── small_utils.py
+├── test_small.py
 └── README.md                # vue d'ensemble
 ```
+
+Le dossier `PicoGPT1-Jasmine/` n'est plus versionné : `train.py` le recrée si tu relances la baseline, sinon le tag `v1.0.0-jasmine` donne accès à l'état d'origine.
 
 ## Versions utilisées lors du développement
 
