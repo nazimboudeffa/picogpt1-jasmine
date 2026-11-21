@@ -27,6 +27,8 @@ ENV/
 *.safetensors
 *.gguf
 checkpoint-*/
+PicoGPT1-Jasmine-Tea/
+PicoGPT1-Jasmine-Tea-Merged/
 *.pt
 *.pth
 *.ckpt
@@ -39,6 +41,7 @@ train.txt
 *.csv
 *.tsv
 *.jsonl
+!dataset_small.jsonl
 
 # Systèmes
 .DS_Store
